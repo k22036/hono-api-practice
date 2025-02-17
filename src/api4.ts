@@ -7,7 +7,7 @@ api4.get('/invalid', async (c) => {
     const res = await axios.get('https://jsonplaceholder.typicode.com/invalid-endpoint')
         .then((response: AxiosResponse<unknown>) => {
             c.status(200)
-            return c.json({ response: response })
+            return c.json({ response: response.data })
         })
         .catch((error: AxiosError) => {
             c.status(500)
