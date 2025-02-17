@@ -6,6 +6,7 @@ import api3 from './api3.ts'
 import api4 from './api4.ts'
 import api5 from './api5.ts'
 import api6 from './api6.ts'
+import api7 from './api7.ts'
 
 const app = new Hono()
 
@@ -19,6 +20,7 @@ app.route('/api3', api3)
 app.route('/api4', api4)
 app.route('/api5', api5)
 app.route('/api6', api6)
+app.route('/api7', api7)
 
 const port = 3000
 console.log(`Server is running on http://localhost:${port}`)
